@@ -16,7 +16,7 @@ def main():
 
     movie_list = get_ids()
 
-    metadata = open("movie_metadata.txt", 'w')
+    metadata = open("movie_metadata.csv", 'w')
 
     for  i in range(len(movie_list)):
         res = omdb.get(imdbid=movie_list[i], fullplot=False, tomatoes=True)
