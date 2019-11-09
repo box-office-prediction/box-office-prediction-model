@@ -1,3 +1,6 @@
+"""
+@author: sergio
+"""
 from omdbapi.movie_search import GetMovie
 import os
 

@@ -1,3 +1,6 @@
+"""
+@author: sergio
+"""
 import omdb
 import os
 
