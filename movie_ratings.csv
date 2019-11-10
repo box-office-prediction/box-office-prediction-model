@@ -1,3 +1,4 @@
+ratings:source:source1:value1:source2:value2:source3:value3:
 {'Ratings': [{'Source': 'Internet Movie Database' 'Value': '8.5/10'} {'Source': 'Rotten Tomatoes' 'Value': '94%'} {'Source': 'Metacritic' 'Value': '78/100'}]}
 {'Ratings': [{'Source': 'Internet Movie Database' 'Value': '7.0/10'} {'Source': 'Rotten Tomatoes' 'Value': '53%'} {'Source': 'Metacritic' 'Value': '55/100'}]}
 {'Ratings': [{'Source': 'Internet Movie Database' 'Value': '8.0/10'} {'Source': 'Rotten Tomatoes' 'Value': '97%'} {'Source': 'Metacritic' 'Value': '84/100'}]}
