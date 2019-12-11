@@ -4,6 +4,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+#this function scrapes box office mojo for box office
 def mojo_scrape(movie_id):
     response = requests.get("https://www.boxofficemojo.com/title/{}/?ref_=bo_se_r_1".format(movie_id))
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -16,6 +17,8 @@ def mojo_scrape(movie_id):
     international = movie_money[1].get_text()
     international = str(international).replace('$','').replace(',','')
     international = int(international)
+    #this checks whether the international field is empty, if it is, just take domestic into account
+    #avoids error
     if (domestic == international):
         total = domestic
     else:
@@ -23,6 +26,7 @@ def mojo_scrape(movie_id):
     print(total)
     return total
 
+    #this function get all movie IMDB ID's
 def get_ids():
     movie_list = []
     with open('movie_ids.txt') as f:

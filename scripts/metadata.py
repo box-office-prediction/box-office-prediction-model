@@ -4,6 +4,7 @@
 import omdb
 import os
 
+    #this function get all movie IMDB ID's
 def get_ids():
     movie_list = []
     with open('movie_ids.txt') as f:

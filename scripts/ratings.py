@@ -12,6 +12,7 @@ def ratings(movie_title):
 
     return ratings
 
+#this function get all movie titles
 def get_titles():
     movie_list = []
     with open('movie_titles.txt') as f:

@@ -4,6 +4,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+#this function scrapes imdb for budget
 def imdb_scraper(movie_id):
     response = requests.get("https://www.imdb.com/title/{}/?ref_=fn_al_tt_1".format(movie_id))
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -17,6 +18,7 @@ def imdb_scraper(movie_id):
     movie_id = str(movie_id).replace("/title/","").replace("/","")
     return budget
 
+    #this function get all movie IMDB ID's
 def get_ids():
     movie_list = []
     with open('movie_ids.txt') as f:

@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.dates import (WEEKLY, DateFormatter, rrulewrapper, RRuleLocator, drange)
 
+#this function groups metric and box office data
 def group_data():
     group_doc = open("budget_total.csv", 'w')
     budget_list = list()
@@ -27,6 +28,7 @@ def group_data():
     
     group_doc.close()
 
+#this function sorts the data to be able to create scatter plot
 def sort_group():
     sorted_list = list()
     sorted_date = open("budget_total_sorted.csv", 'w')
@@ -42,7 +44,7 @@ def sort_group():
 
     sorted_date.close()
 
-
+#this function creates the scatter plot
 def scatter_plot():
     #read data from csv
     data = pd.read_csv('budget_total_sorted.csv')

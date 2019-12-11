@@ -12,6 +12,7 @@ def release(movie_title):
 
     return release
 
+#this function get all movie titles
 def get_titles():
     movie_list = []
     with open('movie_titles.txt') as f:

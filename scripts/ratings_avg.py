@@ -1,6 +1,8 @@
 """
 @author: sergio
 """
+
+#this function changes the format of the ratings to one common 1-100 scale
 def change_format():
     imdb_list = list()
     tomato_list = list()
