@@ -6,13 +6,13 @@ Created on Sun Nov  3 11:53:08 2019
 """
 from pytrends.request import TrendReq
 import numpy as np
+import time
 
 
 
 pytrend = TrendReq()
-p = 'C:/Users/deman/.spyder-py3/Senior Research/box-office-prediction-model/movie_titles2.txt'
 t = open('output.txt', 'w+')
-with open(p, 'r') as f:
+with open('movie_titles.txt', 'r') as f:
     list2 = []
     for item in f:
         number = 0 
@@ -23,11 +23,13 @@ with open(p, 'r') as f:
     #list1 = ['Avengers: Endgame', 'Joker', 'It 2']
     movies = []
     x = 0
+    print(list2)
     for i in list2:
+        time.sleep(5)
         scores = []
         movies.append(i)
         kw_list=['Twitter', i]
-        pytrend.build_payload(kw_list, timeframe = '2019-01-01 2019-11-04')
+        pytrend.build_payload(kw_list, timeframe = '2019-01-01 2019-11-10')
         interest_over_time_df = pytrend.interest_over_time()
         del interest_over_time_df['isPartial']
         a = np.array(interest_over_time_df[i])

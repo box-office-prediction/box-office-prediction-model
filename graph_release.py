@@ -49,11 +49,11 @@ def scatter_plot():
     data = pd.read_csv('release_total_sorted.csv')
     data_date = data['datetime']
     data_money = data['boxoffice']
-    plt.scatter(data_date, data_money, s=2)
+    plt.scatter(data_date, data_money, s=5)
     plt.xlabel('Date')
     plt.ylabel('Box Office')
     plt.title('Release Date')
-    plt.xticks(rotation=90, fontsize='5')
+    plt.xticks(["01/04/2019","02/01/2019","03/01/2019","04/05/2019","05/03/2019","06/07/2019","07/03/2019","08/02/2019","09/06/2019","10/04/2019"],fontsize=7,rotation=30)
     plt.savefig('graph_release_scatter.png')
 
 def main():

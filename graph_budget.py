@@ -48,9 +48,9 @@ def scatter_plot():
     data = pd.read_csv('budget_total_sorted.csv')
     data_date = data['budget']
     data_money = data['boxoffice']
-    plt.scatter(data_date, data_money, s=2)
-    plt.xlabel('Budget')
-    plt.ylabel('Box Office')
+    plt.scatter(data_date, data_money, s=5)
+    plt.xlabel('Budget (hundreds of millions)')
+    plt.ylabel('Box Office (billions)')
     plt.title('Budget')
     plt.savefig('graph_budget_scatter.png')
 
